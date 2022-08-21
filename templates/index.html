@@ -14,8 +14,8 @@
 		<div class="card-body">
 				{% for key, values in budgets.items() %}
 						<h4 class="small fw-bold">{{key}}<span class="float-end">{{values[3]}}</span></h4>
-						{% if values[2] > 75 %}
-						<div class="progress mb-4"><div class="progress-bar bg-warning" aria-valuenow="{{values[0]}}" aria-valuemin="0" aria-valuemax="{{values[1]}}" style="width:{{values[2]}}%;">
+					{% if values[2] > 75 %}
+						<div class="progress mb-4"><div class="progress-bar bg-danger" aria-valuenow="{{values[0]}}" aria-valuemin="0" aria-valuemax="{{values[1]}}" style="width:{{values[2]}}%;">
 
 					{% elif values[2] > 50 and values[2] < 75 %}
 						<div class="progress mb-4"><div class="progress-bar bg-warning" aria-valuenow="{{values[0]}}" aria-valuemin="0" aria-valuemax="{{values[1]}}" style="width:{{values[2]}}%;">
