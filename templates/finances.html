@@ -12,7 +12,7 @@
 </div>
 {% if expenses_this_year + income_this_year < 0 %}
 <h6 class="text-danger" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">{{net_this_year}}</h6>
-	{% if expenses_this_year + income_this_year >= 0 %}
+	{% elif expenses_this_year + income_this_year >= 0 %}
 <h6 class="text-success" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">+{{net_this_year}}</h6>
         {% endif %}</div><div class="col-md-4"><div class="col-md-3">
     <h6 class="text-dark" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: right;font-weight: bold;">Expenses This Year:</h6>
@@ -21,7 +21,8 @@
 <h6 class="text-danger" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">{{expenses_this_year_f}}</h6>
 	{% elif expenses_this_year >= 0 %}
 <h6 class="text-success" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">+{{expenses_this_year_f}}</h6>
-        {% endif %}</div></div></div></div></nav><div class="container"><h2 class="text-dark">Week of {{this_week}}</h2><div class="row"><div class="col-md-3"><div class="card shadow border-start-primary py-2"><div class="card-body"><div class="row align-items-center no-gutters"><div class="col me-2"><div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Income</span></div><div class="text-dark fw-bold h5 mb-0"><span>{{income_this_week}}</span></div></div><div class="col-auto"><i class="material-icons fa-2x text-gray-300" style="font-size: 35px;margin: 0px;">attach_money</i></div></div></div></div></div><div class="col-md-3"><div class="card shadow border-start-success py-2"><div class="card-body"><div class="row align-items-center no-gutters"><div class="col me-2"><div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Expenses</span></div><div class="text-dark fw-bold h5 mb-0">{% if expenses_this_week < 0 %}
+        {% endif %}</div></div></div></div></nav><div class="container"><h2 class="text-dark">Week of {{this_week}}</h2><div class="row"><div class="col-md-3"><div class="card shadow border-start-primary py-2"><div class="card-body"><div class="row align-items-center no-gutters"><div class="col me-2"><div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Income</span></div><div class="text-dark fw-bold h5 mb-0"><span>{{income_this_week}}</span></div></div><div class="col-auto"><i class="material-icons fa-2x text-gray-300" style="font-size: 35px;margin: 0px;">attach_money</i></div></div></div></div></div><div class="col-md-3"><div class="card shadow border-start-success py-2"><div class="card-body"><div class="row align-items-center no-gutters"><div class="col me-2"><div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Expenses</span></div><div class="text-dark fw-bold h5 mb-0">
+			{% if expenses_this_week < 0 %}
     <span style="color:red">-${{expenses_this_week*-1}}</span>
 {% elif expenses_this_week >= 0 %}
     <span style="color:black">${{expenses_this_week}}</span>
