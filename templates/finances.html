@@ -3,21 +3,21 @@
 </svg><span>FIRE</span></a></li><li class="nav-item"></li><li class="nav-item"></li><li class="nav-item"></li></ul><div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div></div></nav><div class="d-flex flex-column" id="content-wrapper"><div id="content"><nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top"><div class="container-fluid"><header></header><div class="container" style="width: 100%;"><div class="row"><div class="col-md-3" style="width: 16%;">
 	<h6 class="text-center text-dark" style="margin-top: 30%;margin-bottom: 25%;text-align: right;font-size: 16px;">Income This Year:</h6></div><div class="col-md-3" style="width: 16%;">
     {% if income_this_year >= 0 %}
-	<h6 class="text-success" style="padding: 0px;margin-top: 30%;margin-bottom: 15%;text-align: center;">+{{income_this_year_f}}</h6>
+	<h6 class="text-success" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">+{{income_this_year_f}}</h6>
 	{% elif income_this_year < 0 %}
-	<h6 class="text-danger" style="padding: 0px;margin-top: 30%;margin-bottom: 15%;text-align: center;">{{income_this_year_f}}</h6>
+	<h6 class="text-danger" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">{{income_this_year_f}}</h6>
 	{% endif %}
 </div><div class="col-md-3" style="width: 16%;"><h6 class="text-center text-dark" style="margin-top: 30%;margin-bottom: 25%;text-align: right;font-size: 16px;">Expenses This Year:</h6></div><div class="col-md-3" style="width: 16%;">
     {% if expenses_this_year >= 0 %}
-	<h6 class="text-success" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">+{{expenses_this_year_f}}</h6>
+	<h6 class="text-success" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">+{{expenses_this_year_f}}</h6>
 	{% elif expenses_this_year < 0 %}
-	<h6 class="text-danger" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">{{expenses_this_year_f}}</h6>
+	<h6 class="text-danger" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">{{expenses_this_year_f}}</h6>
 	{% endif %}
-</div><div class="col-md-3" style="width: 16%;"><h6 class="text-center text-dark" style="margin-top: 30%;margin-bottom: 25%;text-align: right;font-size: 16px;">Net:</h6></div><div class="col-md-3" style="width: 16%;">
+</div><div class="col-md-3" style="width: 16%;"><h6 class="text-center text-dark" style="margin-top: 40%;margin-bottom: 25%;text-align: right;font-size: 16px;">Net:</h6></div><div class="col-md-3" style="width: 16%;">
     {% if income_this_year + expenses_this_year >= 0 %}
-	<h6 class="text-success" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">+{{net_this_year}}</h6>
+	<h6 class="text-success" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">+{{net_this_year}}</h6>
 	{% elif income_this_year + expenses_this_year < 0 %}
-	<h6 class="text-danger" style="padding: 0px;margin-top: 15%;margin-bottom: 15%;text-align: center;">{{net_this_year}}</h6>
+	<h6 class="text-danger" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">{{net_this_year}}</h6>
 	{% endif %}
 </div></div></div></div></nav><div class="container"><h2 class="text-dark">Week of {{this_week}}</h2><div class="row"><div class="col-md-3"><div class="card shadow border-start-primary py-2"><div class="card-body"><div class="row align-items-center no-gutters"><div class="col me-2"><div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Income</span></div><div class="text-dark fw-bold h5 mb-0"><span>{{income_this_week}}</span></div></div><div class="col-auto"><i class="material-icons fa-2x text-gray-300" style="font-size: 35px;margin: 0px;">attach_money</i></div></div></div></div></div><div class="col-md-3"><div class="card shadow border-start-success py-2"><div class="card-body"><div class="row align-items-center no-gutters"><div class="col me-2"><div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Expenses</span></div><div class="text-dark fw-bold h5 mb-0">{% if expenses_this_week < 0 %}
     <span style="color:red">-${{expenses_this_week*-1}}</span>
