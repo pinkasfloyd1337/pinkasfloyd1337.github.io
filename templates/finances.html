@@ -42,14 +42,17 @@
 						</div>
 					
 				{% endfor %}
-<h4 class="small fw-bold">TOTAL<span class="float-end">${{budget_left}}</span></h4>
 				{% if budget_perc > 100 %}
+				<h4 class="small fw-bold">TOTAL<span class="float-end" style="color:red">{{budget_left}}</span></h4>
 				<div class="progress mb-4"><div class="progress-bar bg-dark" aria-valuenow="{{expenses_this_month}}" aria-valuemin="0" aria-valuemax="{{budget_per_month}}" style="width:{{budget_perc}}%;"> 
 				{% elif budget_perc > 75 %}
+				<h4 class="small fw-bold">TOTAL<span class="float-end">{{budget_left}}</span></h4>
 					<div class="progress mb-4"><div class="progress-bar bg-danger" aria-valuenow="{{expenses_this_month}}" aria-valuemin="0" aria-valuemax="{{budget_per_month}}" style="width:{{budget_perc}}%;"> 
 				{% elif budget_perc < 75 and budget_perc > 50 %}
+				<h4 class="small fw-bold">TOTAL<span class="float-end">{{budget_left}}</span></h4>
 				<div class="progress mb-4"><div class="progress-bar bg-warning" aria-valuenow="{{expenses_this_month}}" aria-valuemin="0" aria-valuemax="{{budget_per_month}}" style="width:{{budget_perc}}%;"> 
 				{% elif budget_perc < 50 %}
+				<h4 class="small fw-bold">TOTAL<span class="float-end">{{budget_left}}</span></h4>
 				<div class="progress mb-4"><div class="progress-bar bg-success" aria-valuenow="{{expenses_this_month}}" aria-valuemin="0" aria-valuemax="{{budget_per_month}}" style="width:{{budget_perc}}%;"> 
 				{% endif %}
     <span class="visually-hidden">{{budget_left}}</span></div></div></div></div></div></div></div><footer class="bg-white sticky-footer"><div class="container my-auto"><div class="text-center my-auto copyright"><span>Copyright © Brand 2022</span></div></div></footer></div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div><script src="assets/bootstrap/js/bootstrap.min.js"></script><script src="assets/js/script.min.js"></script></body></html>
