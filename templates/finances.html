@@ -13,7 +13,7 @@
 	{% elif expenses_this_year < 0 %}
 	<h6 class="text-danger" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">{{expenses_this_year_f}}</h6>
 	{% endif %}
-</div><div class="col-md-3"><h6 class="text-center text-dark">Net:</h6></div><div class="col-md-3" style="width: 16%;">
+</div><h6 class="text-center text-dark">Net:</h6></div><div class="col-md-3" style="width: 16%;">
     {% if income_this_year + expenses_this_year >= 0 %}
 	<h6 class="text-success" style="padding: 0px;margin-top: 40%;margin-bottom: 15%;text-align: center;">+{{net_this_year}}</h6>
 	{% elif income_this_year + expenses_this_year < 0 %}
