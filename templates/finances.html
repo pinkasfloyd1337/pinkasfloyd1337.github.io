@@ -157,7 +157,43 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 mb-4">
+                        <div class="col-md-3">
+                            <div class="card textwhite bg-danger text-white shadow">
+                                <div class="card-body">
+                                    <p class="m-0">{{expenses_per_day}}</p>
+                                    <p class="text-white-50 small m-0">Expenses Per Day</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card textwhite bg-danger text-white shadow">
+                                <div class="card-body">
+                                    <p class="m-0">{{expenses_per_week}}</p>
+                                    <p class="text-white-50 small m-0">Expenses Per Week</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card textwhite bg-danger text-white shadow">
+                                <div class="card-body">
+                                    <p class="m-0">{{expenses_per_month}}</p>
+                                    <p class="text-white-50 small m-0">Expenses Per Month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card textwhite bg-success text-white shadow">
+                                <div class="card-body text-light" style="border-color: var(--bs-indigo);">
+                                    <p class="m-0">{{income_per_day}}</p>
+                                    <p class="text-white-50 small m-0">Income Per Day</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-top: 2%;">
+                    <div class="row">
+                        <div class="col-md-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="text-primary fw-bold m-0">Budget</h6>
@@ -190,48 +226,6 @@
 				<div class="progress mb-4"><div class="progress-bar bg-success" aria-valuenow="{{expenses_this_month}}" aria-valuemin="0" aria-valuemax="{{budget_per_month}}" style="width:{{budget_perc}}%;"> 
 				{% endif %}
     <span class="visually-hidden">{{budget_left}}</span></div></div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card textwhite bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">{{expenses_per_day}}</p>
-                                            <p class="text-white-50 small m-0">Expenses Per Day</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card textwhite bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">{{expenses_per_week}}</p>
-                                            <p class="text-white-50 small m-0">Expenses Per Week</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card textwhite bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">{{expenses_per_month}}</p>
-                                            <p class="text-white-50 small m-0">Expenses Per Month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card textwhite bg-success text-white shadow">
-                                        <div class="card-body text-light" style="border-color: var(--bs-indigo);">
-                                            <p class="m-0">{{income_per_day}}</p>
-                                            <p class="text-white-50 small m-0">Income Per Day</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card textwhite bg-success text-white shadow"></div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card textwhite bg-success text-white shadow"></div>
-                                </div>
                             </div>
                         </div>
                     </div>
