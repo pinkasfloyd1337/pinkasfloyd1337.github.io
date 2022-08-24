@@ -84,7 +84,7 @@
                                 </thead>
                                 <tbody>
                                 <tbody>
-                                    {% for table in tables %}
+                                    {% for row, table in df_this_year.iterrows() %}
                                     <tr>
                                         <td>{{ table.Week }}</td>
                                         <td>{{ table.Income }}</td>
