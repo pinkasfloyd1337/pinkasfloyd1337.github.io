@@ -72,14 +72,28 @@
                 <div class="brands"></div>
                 <div class="container" style="margin-top: 2%;">
                     <div class="row">
-                        <div class="col-md-12"><div><table>
-                            <tr>
-                                <th>Week</th>
-                                <th>Income</th>
-                                <th>Expenses</th>
-                                <th>Net</th>
-                              </tr>
-{{this_year_table}}</table>
+                        <div class="col-md-12"><div>
+                            <table id="data" class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Week</th>
+                                    <th>Income</th>
+                                    <th>Expenses</th>
+                                    <th>Net</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                <tbody>
+                                    {% for table in tables %}
+                                    <tr>
+                                        <td>{{ table.Week }}</td>
+                                        <td>{{ table.Income }}</td>
+                                        <td>{{ table.Expenses }}</td>
+                                        <td>{{ table.Net }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
         </div></div>
                     </div>
                 </div>
