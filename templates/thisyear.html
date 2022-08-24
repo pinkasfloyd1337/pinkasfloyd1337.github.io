@@ -74,12 +74,10 @@
                     <div class="row">
                         <div class="col-md-12"><div align="center">
             <table id="data" class="table table-striped">
-                <h1>
 {% for table in this_year_table %}
                     {{titles[loop.index]}}
             {{ table|safe }}
 {% endfor %}
-                </h1> 
             </table>
         </div></div>
                     </div>
