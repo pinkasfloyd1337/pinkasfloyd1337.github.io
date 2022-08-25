@@ -217,7 +217,7 @@
 						</div>
 					
 				{% endfor %}
-<h4 class="small fw-bold">TOTAL<span class="float-end">${{budget_left}}</span></h4>
+<h4 class="small fw-bold">TOTAL<span class="float-end">{{budget_left}}</span></h4>
 				{% if budget_perc > 100 %}
 				<div class="progress mb-4"><div class="progress-bar bg-dark" aria-valuenow="{{expenses_this_month}}" aria-valuemin="0" aria-valuemax="{{budget_per_month}}" style="width:{{budget_perc}}%;"> 
 				{% elif budget_perc > 75 %}
