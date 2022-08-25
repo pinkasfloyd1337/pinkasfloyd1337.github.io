@@ -92,9 +92,14 @@
                                     {% for row, table in df_this_year.iterrows() %}
                                     <tr>
                                         <td>{{ table.Week }}</td>
+                                        <td>{{ table['Checking Beginning'] }}</td>
                                         <td>{{ table.Income }}</td>
                                         <td>{{ table.Expenses }}</td>
                                         <td>{{ table.Net }}</td>
+                                        <td>{{ table['After Net'] }}</td>
+                                        <td>{{ table['Add To savings'] }}</td>
+                                        <td>{{ table['Add To Investment'] }}</td>
+                                        <td>{{ table['Checking End'] }}</td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
